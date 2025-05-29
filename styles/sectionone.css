@@ -1,0 +1,36 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(
+      var(--medium),
+      transparent,
+      var(--medium)
+    );
+  }
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > .container {
+    h1 {
+      color: white;
+      margin-bottom: 8rem;
+    }
+
+    & > div{
+        display: flex; 
+        & > div{
+            flex: 10rem 1 1;
+            color: white;
+        }
+    }
+  }
+}

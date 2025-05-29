@@ -3,6 +3,7 @@
 import { defineConfig } from 'sanity';
 import { schemaTypes } from './schemaTypes';
 import { structureTool } from 'sanity/structure';
+import {visionTool} from '@sanity/vision'
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || '';
 export default defineConfig({
@@ -13,5 +14,5 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-  plugins: [structureTool()],
+  plugins: [structureTool(),visionTool()],
 });
