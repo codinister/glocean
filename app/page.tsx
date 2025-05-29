@@ -1,17 +1,20 @@
-'use client'
+'use client';
 
-import Herosection from "@/components/sections/Herosection";
-import useGetQuery from "@/data/query/useGetQuery";
+import Herosection from '@/components/sections/Herosection';
+import Sectionfour from '@/components/sections/Sectionfour';
+import Sectionthree from '@/components/sections/Sectionthree';
+import Sectiontwo from '@/components/sections/Sectiontwo';
+import useGetQuery from '@/data/query/useGetQuery';
 
 export default function Home() {
-
-  const data = useGetQuery('/sections','sections')
-
+  const data = useGetQuery('/sections', 'sections');
 
   return (
     <>
-    <Herosection data={data[3]} />
-    
+      <Herosection data={data[3]} />
+      <Sectiontwo data={data[1]} />
+      <Sectionthree data={data[2]} />
+      <Sectionfour data={data[0]} />
     </>
   );
 }

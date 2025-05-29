@@ -1,27 +1,10 @@
 'use client';
 
+import { Sectiontype } from '@/types/types';
+import { FaTruckFast } from 'react-icons/fa6';
 import { GiBattleship } from 'react-icons/gi';
-
-type Herosectiontype = {
-  data: {
-    mainsection: {
-      title: string;
-      body: string;
-      excerpt: string;
-      _type: string;
-      image: string;
-    };
-    subsection: {
-      title: string;
-      body: string;
-      subtitle: string;
-      icon: React.ReactNode;
-      excerpt: string;
-      _type: string;
-      image: string;
-    }[];
-  };
-};
+import { LiaPlaneDepartureSolid } from 'react-icons/lia';
+import { MdOutlineEmojiTransportation } from 'react-icons/md';
 
 type HeroSectionThumbType = {
   title: string;
@@ -34,13 +17,15 @@ const HeroSectionThumb = ({ title, subtitle, icon }: HeroSectionThumbType) => {
     <div className="herothumb">
       <div>{icon}</div>
       <div>
-        <h5>{title}</h5>
-        <p>{subtitle}</p>
+        <div>
+          <h5>{title}</h5>
+          <p>{subtitle}</p>
+        </div>
       </div>
     </div>
   );
 };
-const Herosection = ({ data }: Herosectiontype) => {
+const Herosection = ({ data }: Sectiontype) => {
   const mainsection = data?.mainsection;
   const subsection = data?.subsection ? data?.subsection : [];
 
@@ -60,13 +45,13 @@ const Herosection = ({ data }: Herosectiontype) => {
             <HeroSectionThumb
               title={subsection[0]?.title}
               subtitle={subsection[0]?.subtitle}
-              icon={<GiBattleship />}
+              icon={<FaTruckFast />}
             />
 
             <HeroSectionThumb
               title={subsection[1]?.title}
               subtitle={subsection[1]?.subtitle}
-              icon={<GiBattleship />}
+              icon={<LiaPlaneDepartureSolid />}
             />
           </div>
           <div>
@@ -79,7 +64,7 @@ const Herosection = ({ data }: Herosectiontype) => {
             <HeroSectionThumb
               title={subsection[3]?.title}
               subtitle={subsection[3]?.subtitle}
-              icon={<GiBattleship />}
+              icon={<MdOutlineEmojiTransportation />}
             />
           </div>
         </div>

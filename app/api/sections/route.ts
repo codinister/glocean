@@ -20,7 +20,7 @@ export async function GET() {
             }
           },
           'image': image.asset->url,
-          "excerpt": array::join(string::split((pt::text(body)), "")[0..100], "") + "..."
+          "excerpt": array::join(string::split((pt::text(body)), "")[0..300], "") + "..."
         },
       'subsection': subsection[]{
             ...,

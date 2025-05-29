@@ -16,6 +16,10 @@ body {
   line-height: 2.4rem;
   background-color: #0b0c0e;
   min-height: 100vh;
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
 }
 
 ul {
@@ -27,7 +31,12 @@ h2,
 h3,
 h4,
 h5 {
-  line-height: 1.2rem;
+  line-height: 4rem;
+}
+
+a {
+  text-decoration: none;
+  display: block;
 }
 
 h1 {

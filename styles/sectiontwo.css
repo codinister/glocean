@@ -1,0 +1,18 @@
+.sectiontwo {
+  padding-block: 7.2rem;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    & > div {
+      flex: 10rem 1 1;
+      height: 40rem;
+    }
+    & > div:nth-of-type(2) {
+      color: white;
+      & > p:nth-of-type(2) {
+        margin-block: 3.2rem;
+      }
+    }
+  }
+}

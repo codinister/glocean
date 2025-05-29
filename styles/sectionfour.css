@@ -1,0 +1,23 @@
+.sectionfour {
+  padding-block: 7.2rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: -2;
+  color: white;
+  &::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  & > .container{
+    display: flex; 
+    flex-wrap: wrap; 
+    & > div{
+        flex: 10rem 1 1;
+    }
+  }
+}
