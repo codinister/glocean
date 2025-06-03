@@ -62,6 +62,14 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    })
+    }),
+    defineField({
+      name: 'enquiry',
+      title: 'Enquiry',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
   ],
 });

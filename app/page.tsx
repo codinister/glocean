@@ -1,5 +1,6 @@
 'use client';
 
+import Enquiry from '@/components/sections/Enquiry';
 import Herosection from '@/components/sections/Herosection';
 import Sectionfour from '@/components/sections/Sectionfour';
 import Sectionthree from '@/components/sections/Sectionthree';
@@ -15,6 +16,7 @@ export default function Home() {
       <Sectiontwo data={data[1]} />
       <Sectionthree data={data[2]} />
       <Sectionfour data={data[0]} />
+      <Enquiry />
     </>
   );
 }
