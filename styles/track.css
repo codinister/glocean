@@ -1,0 +1,72 @@
+@media (min-width: 35em) {
+  .track {
+    padding-block: 7.2rem;
+    .container {
+      & > div:nth-of-type(1) {
+        color: white;
+        margin-bottom: 4rem;
+      }
+
+      & > div:nth-of-type(2) {
+        & > div:nth-of-type(1) {
+          background-color: white;
+          padding: 2.4rem;
+          display: flex;
+          justify-content: space-between;
+          button {
+            background-color: var(--danger);
+            color: white;
+            border: none;
+            padding: 1.6rem;
+            outline: none;
+          }
+          input {
+            font-size: 1.8rem;
+            border: none;
+            outline: none;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (max-width: 35em) {
+  .track {
+    padding: 2.4rem;
+    .container {
+      & > div:nth-of-type(1) {
+        color: white;
+        margin-bottom: 4rem;
+      }
+
+      & > div:nth-of-type(2) {
+        & > div:nth-of-type(1) {
+          background-color: white;
+          padding: 2.4rem;
+          display: flex;
+          justify-content: space-between;
+          button {
+            background-color: var(--danger);
+            color: white;
+            border: none;
+            padding: 1.6rem;
+            outline: none;
+          }
+          input {
+            font-size: 1.8rem;
+            border: none;
+            outline: none;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
