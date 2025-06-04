@@ -1,3 +1,5 @@
+@media(min-width: 35em){
+
 .sectionthree {
   background-color: var(--medium);
   padding-block: 7.4rem;
@@ -32,4 +34,5 @@
       }
     }
   }
+}
 }

@@ -1,3 +1,6 @@
+
+@media(min-width: 35em){
+
 .container {
   padding-inline: 5.6rem;
 }
@@ -16,4 +19,5 @@
       border: solid .1rem var(--danger);
   
   }
+}
 }

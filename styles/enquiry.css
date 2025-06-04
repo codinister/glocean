@@ -1,65 +1,66 @@
-.enquiry {
-  padding-block: 7.2rem;
-  & > .container {
-    color: white;
-    & > div:nth-of-type(1) {
-      margin-bottom: 4rem;
-    }
-    & > div:nth-of-type(2) {
-      form {
-        button{
-          cursor: pointer;
-          margin-top: 4rem;
-          outline: none; 
-          background-color: var(--danger);
-          color: white; 
-          padding-block: 1.6rem; 
-          padding-inline: 4rem;
-          border: solid .1rem var(--danger);
-          border-radius: .8rem;
-          &:hover{
-            border: solid .1rem var(--danger); 
-            background-color: var(--medium);
-            
+@media (min-width: 35em) {
+  .enquiry {
+    padding-block: 7.2rem;
+    & > .container {
+      color: white;
+      & > div:nth-of-type(1) {
+        margin-bottom: 4rem;
+      }
+      & > div:nth-of-type(2) {
+        form {
+          button {
+            cursor: pointer;
+            margin-top: 4rem;
+            outline: none;
+            background-color: var(--danger);
+            color: white;
+            padding-block: 1.6rem;
+            padding-inline: 4rem;
+            border: solid 0.1rem var(--danger);
+            border-radius: 0.8rem;
+            &:hover {
+              border: solid 0.1rem var(--danger);
+              background-color: var(--medium);
+            }
           }
-        }
-        & > div {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 3.2rem;
           & > div {
-            flex: 10rem 1 1;
-            input {
-              width: 100%;
-              padding-block: 1.6rem;
-              color: white;
-              background-color: transparent;
-              border: none;
-              outline: none;
-              border-bottom: solid 0.1rem white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3.2rem;
+            & > div {
+              flex: 10rem 1 1;
+              input {
+                width: 100%;
+                padding-block: 1.6rem;
+                color: white;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border-bottom: solid 0.1rem white;
+              }
             }
           }
         }
       }
     }
-  }
 
-  .form-error{
-    color: var(--danger);
-  }
-  .pr-spinner{
-    color: white;
-  }
-  .serv-error{
-    color: var(--danger);
-  }
-  .email-sucess{
-    padding: 4rem; 
-    border: solid .1rem greenyellow; 
-    text-align: center;
-    color: greenyellow!important;
-  }
-  .waiting{
-    margin-top: 4rem;
+    .form-error {
+      color: var(--danger);
+    }
+    .pr-spinner {
+      color: white;
+    }
+    .serv-error {
+      color: var(--danger);
+    }
+    .email-sucess {
+      padding: 4rem;
+      border: solid 0.1rem greenyellow;
+      text-align: center;
+      color: greenyellow !important;
+    }
+    .waiting {
+      margin-top: 4rem;
+    }
   }
 }

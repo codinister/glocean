@@ -1,3 +1,5 @@
+
+@media(min-width: 35em){
 .sectiontwo {
   padding-block: 7.2rem;
   .container {
@@ -15,4 +17,5 @@
       }
     }
   }
+}
 }
