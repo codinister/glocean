@@ -24,3 +24,33 @@
   }
 }
 }
+
+
+
+
+
+
+
+
+
+@media(max-width: 35em){
+.sectionfour {
+  padding-block: 7.2rem;
+  padding-inline: 2.4rem;
+  height: 30rem;
+text-align: center;
+  position: relative;
+  z-index: -2;
+  color: white;
+  display: flex; 
+  align-items: center;
+  &::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+}
+}

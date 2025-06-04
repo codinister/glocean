@@ -39,25 +39,38 @@ const Nav = () => {
         <div>
           <ul>
             <li>
-              <Link className={path === '/' ? 'active' : ''} href="/">
+              <Link
+                className={path === '/' ? 'active' : ''}
+                href="/"
+                onClick={() => setVisibility('hide')}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link className={path === '/about' ? 'active' : ''} href="/about">
+              <Link
+                className={path === '/about' ? 'active' : ''}
+                href="/"
+                onClick={() => setVisibility('hide')}
+              >
                 About
               </Link>
             </li>
             <li>
               <Link
-                className={path === '/contact' ? 'active' : ''}
+                className={path === '/' ? 'active' : ''}
                 href="/contact"
+                onClick={() => setVisibility('hide')}
               >
                 Contact
               </Link>
             </li>
             <li>
-              <Link className={path === '/track' ? 'active' : ''} href="/track">
+              <Link
+                className={path === '/track' ? 'active' : ''}
+                href="/"
+                onClick={() => setVisibility('hide')}
+              >
                 Track Shipment
               </Link>
             </li>

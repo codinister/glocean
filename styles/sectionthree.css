@@ -36,3 +36,49 @@
   }
 }
 }
+
+
+
+
+
+
+
+
+@media(max-width: 35em){
+
+.sectionthree {
+  background-color: var(--medium);
+  padding-block: 7.4rem;
+
+  & > div:nth-of-type(1) {
+    width: 30rem;
+    color: white;
+    margin-bottom: 4rem;
+    text-align: left;
+    padding-left: 2.4rem;
+  }
+  & > div:nth-of-type(2) {
+   padding: 2.4rem; 
+    & > div {
+      
+      background-color: var(--light);
+      height: auto;
+   padding: 1.6rem;
+      color: white; 
+      svg{
+        color: var(--danger);
+        font-size: 6.4rem;
+      }
+      h4{
+        margin-block: 1.6rem;
+      }
+      &:hover{
+        svg{
+            color: white;
+        }
+        background-color: var(--danger);
+      }
+    }
+  }
+}
+}

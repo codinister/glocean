@@ -1,9 +1,10 @@
-
-@media(min-width: 35em){
-
-.container {
-  padding-inline: 5.6rem;
+@media (min-width: 35em) {
+  .container {
+    padding-inline: 5.6rem;
+  }
 }
+
+
 
 .about-btn {
   background-color: var(--danger);
@@ -19,5 +20,4 @@
       border: solid .1rem var(--danger);
   
   }
-}
 }

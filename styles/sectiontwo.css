@@ -19,3 +19,31 @@
   }
 }
 }
+
+
+
+
+
+
+
+
+
+@media(max-width: 35em){
+.sectiontwo {
+  padding-inline: 2.4rem;
+  padding-block: 7.4rem;
+  .container {
+
+    & > div:nth-of-type(1) {
+      height: 40rem;
+      margin-bottom: 2.4rem;
+    }
+    & > div:nth-of-type(2) {
+      color: white;
+      & > p:nth-of-type(2) {
+        margin-block: 3.2rem;
+      }
+    }
+  }
+}
+}
