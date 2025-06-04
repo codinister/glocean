@@ -1,7 +1,8 @@
 'use client';
 
-import Enquiry from '@/components/sections/Enquiry';
-import Herosection from '@/components/sections/Herosection';
+
+import Pageherosection from '@/components/sections/Pageherosection';
+import Sectionfive from '@/components/sections/Sectionfive';
 import Sectionfour from '@/components/sections/Sectionfour';
 import Sectionthree from '@/components/sections/Sectionthree';
 import Sectiontwo from '@/components/sections/Sectiontwo';
@@ -12,11 +13,11 @@ export default function About() {
 
   return (
     <>
-      <Herosection data={data[3]} />
+      <Pageherosection name="About Us" />
       <Sectiontwo data={data[1]} />
-      <Sectionthree data={data[2]} />
+      <Sectionthree data={data[3]} />
+      <Sectionfive data={data[2]} />
       <Sectionfour data={data[0]} />
-      <Enquiry />
     </>
   );
 }
