@@ -7,14 +7,14 @@ import Sectionthree from '@/components/sections/Sectionthree';
 import Sectiontwo from '@/components/sections/Sectiontwo';
 import useGetQuery from '@/data/query/useGetQuery';
 
-export default function Home() {
+export default function About() {
   const data = useGetQuery('/sections', 'sections');
 
   return (
     <>
-      <Herosection data={data[4]} />
+      <Herosection data={data[3]} />
       <Sectiontwo data={data[1]} />
-      <Sectionthree data={data[3]} />
+      <Sectionthree data={data[2]} />
       <Sectionfour data={data[0]} />
       <Enquiry />
     </>
