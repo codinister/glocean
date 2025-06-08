@@ -19,3 +19,30 @@ export type Sectiontype = {
     }[];
   };
 };
+
+export type CustomersType = {
+  customerinfo: {
+    city: string;
+    country: string;
+    email: string;
+    fullname: string;
+    phone: string;
+    postaladdress: string;
+    _type: string;
+  };
+  deliverydate: string;
+  deliverystatus: string;
+  itemsordered: {
+    desc: string;
+    price: string;
+    qty: number;
+    _key: string;
+    _type: string;
+  }[];
+  paymenttype: string;
+  shippingcost: string;
+  shippingdate: string;
+  trackingcode: string;
+  _createdAt: string;
+  _id: string;
+} | undefined

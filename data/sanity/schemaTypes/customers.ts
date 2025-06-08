@@ -40,6 +40,7 @@ export default defineType({
           { title: 'Shipped', value: 'shipped' },
           { title: 'In transit', value: 'transit' },
           { title: 'Out for delivery', value: 'delivering' },
+          { title: 'Estimated delivery', value: 'estimateddelivery' },
           { title: 'Delivered', value: 'delivered' },
         ],
       },
@@ -56,6 +57,34 @@ export default defineType({
       type: 'datetime',
       validation: (Rule) => [Rule.required().error('Delivery date required!')],
     }),
+
+
+        defineField({
+      name: 'shippingcost',
+      title: 'Shipping Cost',
+      type: 'string',
+      validation: (Rule) => [Rule.required().error('Shipping cost required!')],
+    }),
+
+    defineField({
+      title: 'Payment Type',
+      description: 'Select Type',
+      name: 'paymenttype',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Cash', value: 'cash' },
+          { title: 'Momo', value: 'momo' },
+          { title: 'Cheque', value: 'cheque' },
+          { title: 'Bank Deposit', value: 'bankdeposit' },
+        ],
+      },
+      validation: (Rule) => Rule.required().error('Select payment type'),
+    })
+
+
+
+
   ],
   preview: {
     select: {
