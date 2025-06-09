@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
+
 export default defineType({
   name: 'settings',
   title: 'Settings',
@@ -71,5 +72,11 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'currency', 
+      type: 'string', 
+      title: 'Currency', 
+      validation: (Rule) => [Rule.required().error('Currency field required!')],
+    })
   ],
 });

@@ -31,7 +31,9 @@ const Nav = () => {
       <div className={`container navbar ${visibility}`}>
         <div>
           {data[0]?.image ? (
-            <Image src={data[0]?.image} alt="logo" width="100" height="70" />
+            <Link href="/">
+              <Image src={data[0]?.image} alt="logo" width="100" height="70" />
+            </Link>
           ) : (
             ''
           )}

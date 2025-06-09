@@ -2,11 +2,15 @@ import { useReactToPrint } from 'react-to-print';
 import { useRef } from 'react';
 import { CustomersType } from '@/types/types';
 import format_number from '@/utils/format_number';
+import useGetQuery from '@/data/query/useGetQuery';
 
 type OrderInvoiceType = {
   data: CustomersType;
 };
 const OrderInvoice = ({ data }: OrderInvoiceType) => {
+  
+    const sett = useGetQuery('/settings', 'settings');
+  const curr = sett[0]?.currency
   const custinf = data?.customerinfo;
   const itemsordered = data?.itemsordered;
   const trackingcode = data?.trackingcode;
@@ -63,7 +67,7 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
                       <tr key={k}>
                         <td>{v.desc}</td>
                         <td>{v.qty}</td>
-                        <td>{v.price}</td>
+                        <td>{format_number(Number(v.price))}</td>
                       </tr>
                     );
                   })}
@@ -72,11 +76,11 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
                 <tbody>
                   <tr>
                     <td colSpan={2}>Subtotal:</td>
-                    <td>GHs {format_number(subtotal)}</td>
+                    <td>{curr} {format_number(subtotal)}</td>
                   </tr>
                   <tr>
                     <td colSpan={2}>Shipping:</td>
-                    <td>{shippingcost}</td>
+                    <td>{curr} {format_number(Number(shippingcost))}</td>
                   </tr>
                   <tr>
                     <td colSpan={2}>Payment Method:</td>
@@ -84,7 +88,7 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
                   </tr>
                   <tr>
                     <td colSpan={2}>Total:</td>
-                    <td>GHs {format_number(total)}</td>
+                    <td>{curr}  {format_number(total)}</td>
                   </tr>
                 </tbody>
               </table>

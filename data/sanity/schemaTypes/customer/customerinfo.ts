@@ -32,6 +32,7 @@ export default defineType({
       name: 'country',
       title: 'Country',
       type: 'string',
+      initialValue: 'Ghana',
       validation: (Rule) => [Rule.required().error('Country required!')],
     }),
     defineField({

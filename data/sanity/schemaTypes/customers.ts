@@ -59,10 +59,10 @@ export default defineType({
     }),
 
 
-        defineField({
+    defineField({
       name: 'shippingcost',
       title: 'Shipping Cost',
-      type: 'string',
+      type: 'number',
       validation: (Rule) => [Rule.required().error('Shipping cost required!')],
     }),
 
