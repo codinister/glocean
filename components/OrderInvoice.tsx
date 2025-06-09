@@ -8,9 +8,8 @@ type OrderInvoiceType = {
   data: CustomersType;
 };
 const OrderInvoice = ({ data }: OrderInvoiceType) => {
-  
-    const sett = useGetQuery('/settings', 'settings');
-  const curr = sett[0]?.currency
+  const sett = useGetQuery('/settings', 'settings');
+  const curr = sett[0]?.currency;
   const custinf = data?.customerinfo;
   const itemsordered = data?.itemsordered;
   const trackingcode = data?.trackingcode;
@@ -45,6 +44,13 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
               <strong>Thank you for your order</strong>
             </div>
             <div>
+              <div>
+                <strong>{sett[0]?.company_name}</strong>
+                <p>Email: {sett[0]?.email}</p>
+              </div>
+              <hr />
+              <br />
+
               <p>
                 Your order has been received and is now being processed. Your
                 order details are shown below for your reference
@@ -76,11 +82,15 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
                 <tbody>
                   <tr>
                     <td colSpan={2}>Subtotal:</td>
-                    <td>{curr} {format_number(subtotal)}</td>
+                    <td>
+                      {curr} {format_number(subtotal)}
+                    </td>
                   </tr>
                   <tr>
                     <td colSpan={2}>Shipping:</td>
-                    <td>{curr} {format_number(Number(shippingcost))}</td>
+                    <td>
+                      {curr} {format_number(Number(shippingcost))}
+                    </td>
                   </tr>
                   <tr>
                     <td colSpan={2}>Payment Method:</td>
@@ -88,7 +98,9 @@ const OrderInvoice = ({ data }: OrderInvoiceType) => {
                   </tr>
                   <tr>
                     <td colSpan={2}>Total:</td>
-                    <td>{curr}  {format_number(total)}</td>
+                    <td>
+                      {curr} {format_number(total)}
+                    </td>
                   </tr>
                 </tbody>
               </table>
